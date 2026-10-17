@@ -25,6 +25,7 @@
   function msgProduto(p) {
     let t = `Hi Two Little Layers! I'd like to order the ${p.nome}${p.preco != null ? " (" + money(p.preco) + ")" : ""}.`;
     if (p.customizavel) t += " Characters I'd like: ";
+    if (p.personalizavel) t += " Name for personalization: ";
     return t + (p.colecao === "christmas" ? " 🎄" : "");
   }
   const MSG_CUSTOM = "Hi Two Little Layers! I have an idea for a custom piece.";
